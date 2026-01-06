@@ -8,7 +8,7 @@ export class PortfolioDataService {
 
   skills = {
     technical: [
-      'Java', 'PHP', 'SQL', 'C++', 'TypeScript', 'Angular', 'Spring', 'Firebase', 'Maven', 'Hibernate', 'Laravel',
+      'Java', 'PHP', 'SQL', 'C++', 'TypeScript', 'Angular', 'SpringBoot', 'Firebase', 'Maven', 'Hibernate', 'Laravel',
       'HTML', 'CSS', 'SASS', 'REST APIs', 'Unit testing (JUnit)', 'PostgreSQL', 'MongoDB', 'MySQL',
       'Git', 'GitHub Actions', 'Docker', 'DockerHub', 'Jenkins', 'Netbeans', 'IntelliJ', 'Visual Studio Code',
       'Apache Tomcat', 'Nginx', 'OVHcloud (VPS)', 'Windows', 'Linux', 'Windows Server', 'VMware',
@@ -40,6 +40,9 @@ export class PortfolioDataService {
             "Implémenter le service de contact",
             "Maintenir le site et corriger les bugs après déploiement"
           ],
+          achievements: [
+            "Augmentation des prises de contact de 0 à plus de 7 par semaine"
+          ],
           tech: ['PHP','Laravel','MySQL','Git'],
           logo: 'assets/logos/forum-associatif-tous-ensemble.png',
           url: 'https://forumassotousensemble.org/'
@@ -49,10 +52,10 @@ export class PortfolioDataService {
           summary: `Création d'une interface destinée à accompagner les porteurs de projets: gestion des utilisateurs (rôles), gestion des candidatures, dashboard, etc.`,
           tasks: [
             "Rédiger le cahier des charges avec le coordinateur de projets",
-            "Rédiger les spécifications fonctionnelles et techniques",
-            "Développer un MVP (gestion des utilisateurs, rôles, candidatures, dashboard)"
+            "Définir les spécifications fonctionnelles et techniques",
+            "Développer un MVP (gestion des utilisateurs, rôles, gestion des candidatures, dashboard etc)"
           ],
-          tech: ['Angular','Spring','PostgreSQL','MongoDB','Docker','Jenkins','Git'],
+          tech: ['Angular','SpringBoot','PostgreSQL','MongoDB','Docker','Jenkins','Git'],
           logo: 'assets/logos/forum-associatif-tous-ensemble.png',
           url: ''
         }
@@ -94,12 +97,14 @@ export class PortfolioDataService {
       role: 'Développeur',
       period: 'Septembre 2021 à Février 2022',
       description: `Spécialisée dans le domaine de l’informatique, BNR Company a décidé de développer ses activités en déployant les solutions qu’elle conçoit afin d’élargir son offre et de renforcer sa présence sur le marché.`,
-      project: `Développer une API pour un e-commerce`,
+      project: `Développement de solutions de gestion et d'e-commerce`,
       tasks: [
-        "Corriger les bugs identifiés",
-        "Tester les correctifs et les nouveaux services à l'aide de l'outil Postman"
+        "Déploiement de solutions de gestion pour PME et structures de santé",
+        "Développement d'interfaces web et fonctionnalités métiers",
+        "Tests, correction de bugs et maintenance d'API e-commerce",
+        "Tester les correctifs et les nouveaux services à l'aide de Postman"
       ],
-      tech: ['Laravel','MySQL'],
+      tech: ['PHP','Laravel','API REST','Postman','Bootstrap','Figma','MySQL'],
       logo: 'assets/logos/bnr-company.png'
     },
     {
@@ -179,8 +184,8 @@ export class PortfolioDataService {
         "Développer l'API et les services back/front (recherche, filtres, authentification JWT, gestion des produits)"
       ],
       achievements: [
-        "Livraison d'un MVP fonctionnel en 6 semaines",
-        "Amélioration du temps de chargement des pages de 40% grâce à l'optimisation des assets"
+        // "Livraison d'un MVP fonctionnel en 6 semaines",
+        // "Amélioration du temps de chargement des pages de 40% grâce à l'optimisation des assets"
       ],
       tech: ['Angular','Spring Boot','MongoDB','Docker','GitHub Actions','Nginx'],
       url: 'https://www.services-minutes.fr/'
@@ -247,21 +252,21 @@ export class PortfolioDataService {
       period: '2021',
       summary: "Déploiement d'un réseau téléphonique IP pour un particulier : 15 postes IP (Grandstream), auto‑com Grandstream, amplificateurs, convertisseurs analogiques et câblage structuré.",
       url: '',
-      details: `Contexte : Dans le but de moderniser l'infrastructure téléphonique domestique et d'améliorer la qualité audio et la gestion des communications, conception et déploiement d'une solution VoIP complète.`,
+      details: `Contexte : Dans le but de moderniser l'infrastructure téléphonique, d'améliorer la qualité audio et la gestion des communications, un particulier a decidé d'installer un réseau téléphonique IP complet.`,
       tasks: [
         "Étude des besoins et dimensionnement de la solution (nombre de postes, qualité audio)",
-        "Installation et configuration de l'auto‑com Grandstream (PBX) et des postes IP",
-        "Câblage structuré et alimentation PoE des postes, intégration d'amplificateurs si nécessaire",
-        "Installation de convertisseurs analogiques pour équipements legacy (fax, lignes analogiques)",
-        "Tests de QoS, réglages codecs, validation des appels et documentation de l'installation"
+        "Installation et configuration de l'auto‑com Grandstream (IP-PBX) et des postes IP",
+        "Câblage structuré et alimentation PoE des postes, intégration d'un amplificateur",
+        "Installation de convertisseurs analogiques,",
+        "Tests de QoS, validation des appels et documentation de l'installation"
       ],
-      tech: ['Grandstream','SIP','VoIP','IP Phones','Analog gateways','PoE','Cabling','QoS']
+      tech: ['Grandstream','SIP','VoIP','IP Phones','Analog gateways','PoE','Câblage','QoS', 'baie de brassage', 'panneaux de brassage', 'switchs' ],
     }
   ];
 
   languages = [
     { name: 'Français', level: 'Bilingue / Langue natale' },
-    { name: 'Anglais', level: 'Capacité professionnelle limitée' }
+    { name: 'Anglais', level: 'Capacité techniques' }
   ];
 
   // Simple gallery listing some asset images for the Galerie section
@@ -272,7 +277,8 @@ export class PortfolioDataService {
     'assets/logos/ensp-douala.jpg',
     'assets/logos/insa-lyon.png',
     'assets/logos/camtel.png',
-    'assets/logos/lima-survey.png'
+    'assets/logos/lima-survey.png',
+    'assets/logos/Campost.png'
   ];
 
   contact = {

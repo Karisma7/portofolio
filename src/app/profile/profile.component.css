@@ -6,6 +6,7 @@
 .profile-card .initials { position: absolute; inset: 0; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:30px; color:#fff; background:linear-gradient(135deg,var(--accent),#1e3a8a); border-radius:50%; }
 .profile-card h2 { margin: 8px 0 4px 0; font-size:20px; }
 .profile-card .role { margin: 0 0 12px 0; color:var(--muted); font-size:14px }
+.profile-card .location { margin: 0 0 12px 0; color:var(--muted); font-size:13px; font-weight:500 }
 .profile-card .mini-card { text-align:left; margin-top:14px; }
 .profile-card a { color: var(--accent); }
 

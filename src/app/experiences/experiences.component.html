@@ -26,7 +26,7 @@
         </div>
 
         <div *ngIf="e.projects?.length" class="sub-projects">
-          <h4>Missioons associés</h4>
+          <h4>Missions associées</h4>
           <div *ngFor="let p of e.projects" class="project">
             <h5>{{ p.title }}</h5>
             <p class="summary" *ngIf="p.summary">{{ p.summary }}</p>

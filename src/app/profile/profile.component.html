@@ -4,12 +4,13 @@
     <div class="initials" *ngIf="!imageLoaded">{{ initials }}</div>
   </div>
   <h2>{{ data.name }}</h2>
-  <p class="role">Développeur Informatique — Fullstack</p>
+  <p class="role">Ingénieur Développeur Informatique — Fullstack</p>
+  <p class="location">📍 Bordeaux, Tonneins</p>
 
   <div class="contact">
     <p><a [href]="'mailto:' + data.contact.email">{{ data.contact.email }}</a></p>
-    <p><a [href]="data.contact.cv" target="_blank">Ouvrir le CV (nouvelle fenêtre)</a></p>
-    <p><a [href]="data.contact.cv" download>Télécharger le CV</a></p>
+    <!-- <p><a [href]="data.contact.cv" target="_blank">Ouvrir le CV (nouvelle fenêtre)</a></p>
+    <p><a [href]="data.contact.cv" download>Télécharger le CV</a></p> -->
   </div>
   <div class="mini-card">
     <h4>Langues</h4>
