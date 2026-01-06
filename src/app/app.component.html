@@ -1,0 +1,78 @@
+<header class="topbar">
+  <div class="container">
+    <div class="brand">
+      <!-- <h1>{{ data.name }}</h1>
+      <p>Ingénieur développeur Informatique</p> -->
+    </div>
+  </div>
+</header>
+
+<main class="container layout-grid">
+  <aside class="left-col">
+    <app-profile></app-profile>
+  </aside>
+
+  <section class="center-col">
+    <div class="mobile-profile">
+      <app-profile></app-profile>
+    </div>
+    <nav class="top-rubriques">
+      <ul>
+        <li><a href="#" (click)="selectCategory('about'); $event.preventDefault()" [class.active]="selectedCategory==='about'">À propos</a></li>
+        <li><a href="#" (click)="selectCategory('formation'); $event.preventDefault()" [class.active]="selectedCategory==='formation'">Formations</a></li>
+        <li><a href="#" (click)="selectCategory('experience'); $event.preventDefault()" [class.active]="selectedCategory==='experience'">Expériences</a></li>
+        <li><a href="#" (click)="selectCategory('projects'); $event.preventDefault()" [class.active]="selectedCategory==='projects'">Projets</a></li>
+        <li><a href="#" (click)="selectCategory('skills'); $event.preventDefault()" [class.active]="selectedCategory==='skills'">Compétences</a></li>
+        <li><a href="#" (click)="selectCategory('contributions'); $event.preventDefault()" [class.active]="selectedCategory==='contributions'">Contributions</a></li>
+        <li><a href="#" (click)="selectCategory('cv'); $event.preventDefault()" [class.active]="selectedCategory==='cv'">CV</a></li>
+        <!-- <li><a href="#" (click)="selectCategory('references'); $event.preventDefault()" [class.active]="selectedCategory==='references'">Références</a></li> -->
+        <li><a href="#" (click)="selectCategory('projectLinks'); $event.preventDefault()" [class.active]="selectedCategory==='projectLinks'">Liens projets</a></li>
+        <li><a href="#" (click)="selectCategory('gallery'); $event.preventDefault()" [class.active]="selectedCategory==='gallery'">Galerie</a></li>
+      </ul>
+    </nav>
+    <section *ngIf="selectedCategory==='about'" class="card">
+      <h2>À propos</h2>
+      <p>{{ data.about }}</p>
+    </section>
+
+    <section *ngIf="selectedCategory==='formation'" id="formation" class="card">
+      <app-formation></app-formation>
+    </section>
+
+    <section *ngIf="selectedCategory==='skills'" id="skills" class="card">
+      <app-skills></app-skills>
+    </section>
+
+    <section *ngIf="selectedCategory==='experience'" id="experience" class="card">
+      <app-experiences></app-experiences>
+    </section>
+
+    <section *ngIf="selectedCategory==='projects'" id="projects" class="card">
+      <app-projects></app-projects>
+    </section>
+
+    <section *ngIf="selectedCategory==='references'" id="references" class="card">
+      <app-references></app-references>
+    </section>
+
+    <section *ngIf="selectedCategory==='projectLinks'" id="project-links" class="card">
+      <app-project-links></app-project-links>
+    </section>
+
+    <section *ngIf="selectedCategory==='gallery'" id="gallery" class="card">
+      <app-gallery></app-gallery>
+    </section>
+
+    <section *ngIf="selectedCategory==='contributions'" id="contributions" class="card">
+      <app-contributions></app-contributions>
+    </section>
+    <section *ngIf="selectedCategory==='cv'" id="cv" class="card">
+      <app-cv></app-cv>
+    </section>
+  </section>
+  
+</main>
+
+<footer class="site-footer">
+  <div class="container">© {{ data.name }} — Portfolio</div>
+</footer>

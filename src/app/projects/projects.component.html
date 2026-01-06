@@ -1,0 +1,60 @@
+<section class="projects-card">
+  <h2>Projets <span class="count">({{ data.projects.length }})</span></h2>
+  <div class="timeline">
+    <article class="job" *ngFor="let p of sortedProjects">
+      <div class="when">
+        <div class="period">{{ p.period }}</div>
+        <div class="logo" *ngIf="p.logo"><img [src]="p.logo" alt="{{ p.company || p.title }} logo"/></div>
+      </div>
+      <div class="what">
+        <div class="company-head">
+          <div>
+            <h3>{{ p.title }}</h3>
+            <div class="company" *ngIf="p.company">{{ p.company }}</div>
+          </div>
+        </div>
+
+        <p class="desc" *ngIf="p.description">{{ p.description }}</p>
+        <p class="summary" *ngIf="p.summary">{{ p.summary }}</p>
+
+        <div *ngIf="p.details" class="context">
+          <h4>Détails</h4>
+          <p>{{ p.details }}</p>
+        </div>
+
+        <div *ngIf="p.tasks?.length" class="responsibilities">
+          <h4>Réalisations / Tâches</h4>
+          <ul>
+            <li *ngFor="let t of p.tasks">{{ t }}</li>
+          </ul>
+        </div>
+
+        <div *ngIf="p.achievements?.length" class="achievements">
+          <h4>Résultats</h4>
+          <ul>
+            <li *ngFor="let a of p.achievements">{{ a }}</li>
+          </ul>
+        </div>
+
+        <div *ngIf="p.tech?.length" class="tech">Stack: <span class="tag" *ngFor="let t of p.tech">{{ t }}</span></div>
+
+        <div class="card-footer">
+          <a *ngIf="p.url" [href]="p.url" target="_blank" class="btn">Voir</a>
+        </div>
+      </div>
+    </article>
+
+    <div *ngIf="!(data.projects && data.projects.length)" class="empty">Aucun projet listé. Ajoute des projets dans ton CV ou dans `PortfolioDataService`.</div>
+  </div>
+
+  <!-- <div class="projects-links" *ngIf="data.projects && data.projects.length">
+    <h3>Liens des projets</h3>
+    <ul>
+      <li *ngFor="let p of sortedProjects">
+        <a *ngIf="p.url" [href]="p.url" target="_blank" rel="noopener noreferrer">
+          {{ p.title }}<span class="company" *ngIf="p.company"> — {{ p.company }}</span>
+        </a>
+      </li>
+    </ul>
+  </div> -->
+</section>

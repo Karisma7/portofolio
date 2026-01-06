@@ -1,0 +1,20 @@
+<div class="profile-card">
+  <div class="avatar">
+    <img [src]="photoSrc" alt="Photo" (load)="onImageLoad()" (error)="onImageError()">
+    <div class="initials" *ngIf="!imageLoaded">{{ initials }}</div>
+  </div>
+  <h2>{{ data.name }}</h2>
+  <p class="role">Développeur Informatique — Fullstack</p>
+
+  <div class="contact">
+    <p><a [href]="'mailto:' + data.contact.email">{{ data.contact.email }}</a></p>
+    <p><a [href]="data.contact.cv" target="_blank">Ouvrir le CV (nouvelle fenêtre)</a></p>
+    <p><a [href]="data.contact.cv" download>Télécharger le CV</a></p>
+  </div>
+  <div class="mini-card">
+    <h4>Langues</h4>
+    <ul>
+      <li *ngFor="let l of data.languages">{{ l.name }} — {{ l.level }}</li>
+    </ul>
+  </div>
+</div>
