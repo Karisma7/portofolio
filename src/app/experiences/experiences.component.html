@@ -1,0 +1,63 @@
+<section class="experiences-card">
+  <h2>Expériences en entreprise <span class="count">({{ data.experiences.length }})</span></h2>
+  <div class="timeline">
+    <article class="job" *ngFor="let e of data.experiences">
+      <div class="when">
+        <div class="period">{{ e.period }}</div>
+        <div class="logo" *ngIf="e.logo"><img [src]="e.logo" alt="{{ e.company }} logo"/></div>
+      </div>
+      <div class="what">
+        <div class="company-head">
+          <h3>{{ e.company }}</h3>
+        </div>
+        <p class="role">{{ e.role }}</p>
+        <p class="desc">{{ e.description }}</p>
+
+        <div *ngIf="e.context" class="context">
+          <h4>Contexte</h4>
+          <p>{{ e.context }}</p>
+        </div>
+
+        <div *ngIf="(e.responsibilities?.length) || (e.tasks?.length)" class="responsibilities">
+          <h4>Réalisations</h4>
+          <ul>
+            <li *ngFor="let r of (e.responsibilities || e.tasks)">{{ r }}</li>
+          </ul>
+        </div>
+
+        <div *ngIf="e.projects?.length" class="sub-projects">
+          <h4>Missions associées</h4>
+          <div *ngFor="let p of e.projects" class="project">
+            <h5>{{ p.title }}</h5>
+            <p class="summary" *ngIf="p.summary">{{ p.summary }}</p>
+
+            <div *ngIf="p.tasks?.length" class="responsibilities">
+              <h6>Tâches réalisées</h6>
+              <ul>
+                <li *ngFor="let t of p.tasks">{{ t }}</li>
+              </ul>
+            </div>
+
+            <p *ngIf="p.tech?.length" class="tech">Stack: <span class="tag" *ngFor="let t of p.tech">{{ t }}</span></p>
+          </div>
+        </div>
+
+        <div *ngIf="e.details" class="context">
+          <h4>Détails</h4>
+          <p>{{ e.details }}</p>
+        </div>
+
+        <div *ngIf="e.achievements?.length" class="achievements">
+          <h4>Résultats</h4>
+          <ul>
+            <li *ngFor="let a of e.achievements">{{ a }}</li>
+          </ul>
+        </div>
+
+        <div *ngIf="e.tech && e.tech.length" class="tech">Stack:
+          <span class="tag" *ngFor="let t of e.tech">{{ t }}</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

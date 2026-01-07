@@ -1,0 +1,12 @@
+<section class="contrib-card">
+  <h2>Contributions / Publications <span class="count">({{ data.publications.length }})</span></h2>
+  <p class="intro">Articles et publications techniques sur les architectures réseau et l'ingénierie télécoms.</p>
+  <div class="cards">
+    <div class="pub-item" *ngFor="let p of data.publications">
+      <h3 class="pub-title">{{ p.title }}</h3>
+      <p class="summary" *ngIf="p.summary">{{ p.summary }}</p>
+      <a [href]="p.url" target="_blank" rel="noopener" class="link">Consulter la publication →</a>
+    </div>
+  </div>
+  <div *ngIf="!data.publications || !data.publications.length" class="empty">Aucune publication disponible.</div>
+</section>
