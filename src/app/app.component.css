@@ -85,3 +85,9 @@ footer{padding:18px 0;text-align:center;color:#666}
 
 /* mobile-profile hidden by default on larger screens */
 .mobile-profile{display:none}
+
+/* Formation link styles */
+.school-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font-weight:600}
+.school-link:hover{text-decoration:underline}
+.school-link .external-icon{display:inline-flex;align-items:center;color:inherit;opacity:0.9}
+.school-link .external-icon svg{display:block}

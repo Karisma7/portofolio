@@ -138,9 +138,9 @@ export class PortfolioDataService {
   ];
 
   education = [
-    { year: 'Septembre 2025', title: 'Mastère Spécialisé Informatique, Systèmes d\'Information et Réseaux : Manager de projets en informatique et systèmes d\'information', school: 'INSA', logo: 'assets/logos/insa-lyon.png', diploma: 'assets/ASSIGA-ATEBA-Basile-CV-IF.pdf' },
-    { year: 'Novembre 2022', title: 'Master Recherche : Télécommunications et systèmes intelligents', school: 'École Nationale Supérieure Polytechnique de Douala', logo: 'assets/logos/ensp-douala.jpg', diploma: 'assets/ASSIGA-ATEBA-Basile-CV-IF.pdf' },
-    { year: 'Novembre 2020', title: 'Master : Ingénieur de conception en Télécommunications, Technologies de l\'Information et de la Communication', school: 'École Nationale Supérieure Polytechnique de Douala', logo: 'assets/logos/ensp-douala.jpg', diploma: 'assets/ASSIGA-ATEBA-Basile-CV-IF.pdf' }
+    { year: 'Septembre 2025', title: 'Mastère Spécialisé Informatique, Systèmes d\'Information et Réseaux : Manager de projets en informatique et systèmes d\'information', school: 'INSA', logo: 'assets/logos/insa-lyon.png', diploma: 'assets/ASSIGA-ATEBA-Basile-CV-IF.pdf', url: 'https://www.insa-lyon.fr/fr/mastere-informatique' },
+    { year: 'Novembre 2022', title: 'Master Recherche : Télécommunications et systèmes intelligents', school: 'École Nationale Supérieure Polytechnique de Douala', logo: 'assets/logos/ensp-douala.jpg', diploma: 'assets/ASSIGA-ATEBA-Basile-CV-IF.pdf', url: 'https://enspd-udo.cm/' },
+    { year: 'Novembre 2020', title: 'Master : Ingénieur de conception en Télécommunications, Technologies de l\'Information et de la Communication', school: 'École Nationale Supérieure Polytechnique de Douala', logo: 'assets/logos/ensp-douala.jpg', diploma: 'assets/ASSIGA-ATEBA-Basile-CV-IF.pdf', url: 'https://enspd-udo.cm/' }
   ];
 
   // Exemple de relevé de cours / semestres — utilisé par le composant Formation
