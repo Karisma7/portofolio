@@ -1,5 +1,6 @@
 :root{--accent:#0b74de}
-.container{max-width:85%;margin:0 auto;padding:20px}
+/* Réduction des marges latérales et largeur max */
+.container{max-width:98vw;margin:0 auto;padding-left:8px;padding-right:8px;padding-top:20px;padding-bottom:20px}
 header{background:linear-gradient(90deg,#08306b,var(--accent));color:#fff;padding:22px}
 h2{border-left:4px solid var(--accent);padding-left:12px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1.5fr));gap:16px}
@@ -12,9 +13,9 @@ footer{padding:18px 0;text-align:center;color:#666}
 .content{flex:1}
 
 /* New three-column layout */
-.layout-grid{display:grid;grid-template-columns:260px 1.4fr;gap:24px;align-items:start; height:calc(100vh - 120px) /* hauteur augmentée : occupe quasiment toute la fenêtre jusqu'au pied */;}
+.layout-grid{display:grid;grid-template-columns:320px 2fr;gap:32px;align-items:start; height:calc(100vh - 120px) /* hauteur augmentée : occupe quasiment toute la fenêtre jusqu'au pied */;}
 .left-col{ height:100%; overflow:hidden }
-.center-col{ height:100%; overflow-y:auto; padding-right:12px }
+.center-col{ height:100%; overflow-y:auto; padding-right:12px; padding-bottom:60px }
 .top-rubriques{background:transparent;padding:8px 0;margin-bottom:12px}
 .top-rubriques{
   background:var(--card);
@@ -26,7 +27,7 @@ footer{padding:18px 0;text-align:center;color:#666}
   box-shadow:0 4px 12px rgba(2,6,23,0.04);
   border-radius:8px;
 }
-.top-rubriques ul{display:flex;gap:12px;list-style:none;padding:8px 12px;margin:0;align-items:center;flex-wrap:wrap}
+.top-rubriques ul{display:flex;gap:12px;list-style:none;padding:10px 12px;margin:0;align-items:center;flex-wrap:wrap}
 .top-rubriques li{margin:0}
 .top-rubriques a{color:var(--accent);text-decoration:none;padding:6px 10px;border-radius:8px}
 .top-rubriques a.active{background:rgba(37,99,235,0.12);font-weight:600}
@@ -44,16 +45,42 @@ footer{padding:18px 0;text-align:center;color:#666}
 .tech{font-style:italic;color:#444;margin-top:8px}
 .more{display:inline-block;margin-top:8px;color:var(--accent)}
 
-@media(max-width:904px){
+/* Header styles */
+.header-content{display:flex;justify-content:space-between;align-items:center}
+.hamburger-menu{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:4px;z-index:1001}
+.hamburger-menu span{display:block;width:25px;height:3px;background:#fff;transition:all 0.3s ease;border-radius:2px}
+.hamburger-menu.active span:nth-child(1){transform:rotate(45deg) translate(7px,7px)}
+.hamburger-menu.active span:nth-child(2){opacity:0}
+.hamburger-menu.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
+.header-profile{display:none}
+.avatar-small{width:45px;height:45px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,#e6eefb,#f1f8ff);display:flex;align-items:center;justify-content:center;position:relative}
+.avatar-small img{width:100%;height:100%;object-fit:cover}
+.avatar-small .initials{position:absolute;font-weight:700;color:#08306b;font-size:16px}
+
+@media(max-width:936px){
   .layout{flex-direction:column}
   .profile{width:auto}
   /* switch to single column and hide left column (we show a mobile profile inside center) */
   .layout-grid{grid-template-columns:1fr; height:auto}
   .left-col{display:none}
-  .mobile-profile{display:block;margin-bottom:12px}
+  .mobile-profile{display:none} /* Cache aussi le mobile-profile dans la colonne */
   body{overflow:auto} /* allow page scroll on small screens */
-  .center-col{height:auto;overflow:visible}
-  .top-rubriques ul{justify-content:flex-start}
+  .center-col{height:auto;overflow-y:auto;max-height:calc(100vh - 80px);padding:0 2vw;padding-bottom:80px}
+  
+  /* Hamburger menu visible en mobile */
+  .hamburger-menu{display:flex}
+  .header-profile{display:block}
+  
+  /* Menu déroulant */
+  .top-rubriques{position:fixed;top:66px;left:0;right:0;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.15);transform:translateY(-120%);transition:transform 0.3s ease;z-index:1000;max-height:calc(100vh - 66px);overflow-y:auto}
+  .top-rubriques.open{transform:translateY(0)}
+  .top-rubriques ul{flex-direction:column;align-items:stretch;padding:12px}
+  .top-rubriques li{width:100%}
+  .top-rubriques a{display:block;padding:12px 16px;border-bottom:1px solid #f0f0f0}
+  .top-rubriques a.active{background:rgba(37,99,235,0.12)}
+  
+  /* Colonne 2 pleine largeur */
+  .container{max-width:100%;padding:12px}
 }
 
 /* mobile-profile hidden by default on larger screens */

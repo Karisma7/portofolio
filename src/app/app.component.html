@@ -1,8 +1,19 @@
 <header class="topbar">
-  <div class="container">
+  <div class="container header-content">
+    <button class="hamburger-menu" (click)="toggleMenu()" [class.active]="menuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="brand">
       <!-- <h1>{{ data.name }}</h1>
       <p>Ingénieur développeur Informatique</p> -->
+    </div>
+    <div class="header-profile">
+      <div class="avatar-small">
+        <img [src]="profilePhotoSrc" alt="Photo" (load)="onImageLoad()" (error)="onImageError()">
+        <div class="initials" *ngIf="!imageLoaded">{{ initials }}</div>
+      </div>
     </div>
   </div>
 </header>
@@ -16,7 +27,7 @@
     <div class="mobile-profile">
       <app-profile></app-profile>
     </div>
-    <nav class="top-rubriques">
+    <nav class="top-rubriques" [class.open]="menuOpen">
       <ul>
         <li><a href="#" (click)="selectCategory('about'); $event.preventDefault()" [class.active]="selectedCategory==='about'">À propos</a></li>
         <li><a href="#" (click)="selectCategory('formation'); $event.preventDefault()" [class.active]="selectedCategory==='formation'">Formations</a></li>

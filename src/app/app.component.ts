@@ -20,7 +20,13 @@ import { CvComponent } from './cv/cv.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public data: PortfolioDataService) {}
+  menuOpen = false;
+  imageLoaded = false;
+  profilePhotoSrc = '';
+
+  constructor(public data: PortfolioDataService) {
+    this.profilePhotoSrc = this.data.contact?.photo || 'assets/logos/pp.jpeg';
+  }
 
   get initials(): string {
     const name = this.data?.name || '';
@@ -30,5 +36,19 @@ export class AppComponent {
 
   selectCategory(cat: string) {
     this.selectedCategory = cat;
+    // Fermer le menu après sélection sur mobile
+    this.menuOpen = false;
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  onImageLoad() {
+    this.imageLoaded = true;
+  }
+
+  onImageError() {
+    this.imageLoaded = false;
   }
 }
