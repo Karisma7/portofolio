@@ -1,0 +1,9 @@
+.project-links-card{padding:12px;background:var(--card);border-radius:8px}
+.project-links-card h2{margin:0 0 6px}
+.project-links-card ul{list-style:none;padding:0;margin:8px 0}
+.project-links-card li{margin:6px 0}
+.project-links-card a{color:var(--text);text-decoration:none}
+.project-links-card a:hover{text-decoration:underline}
+.project-links-card .empty{color:var(--muted)}
+
+.project-links-card .url{color:var(--muted);margin-left:8px;font-size:13px}

@@ -1,0 +1,35 @@
+<section class="formation-card">
+  <h2>Formations <span class="count">({{ data.education.length }})</span></h2>
+  <div class="education-grid">
+    <div class="education-item" *ngFor="let ed of data.education; let i = index">
+      <div class="edu-head">
+        <div class="logo-top" *ngIf="ed.logo"><img [src]="ed.logo" alt="{{ ed.school }} logo"/></div>
+        <div class="meta">
+          <strong class="edu-title">{{ ed.title }}</strong>
+          <span class="year">{{ ed.year }}</span>
+        </div>
+      </div>
+      <div class="edu-school" [class.small-school]="ed.school && ed.school.indexOf('Polytechnique')!==-1">{{ ed.school }}</div>
+      <div class="diploma-section">
+        <ng-container *ngIf="ed.url; else legacyDiploma">
+          <a class="school-link" [href]="ed.url" target="_blank" rel="noopener noreferrer">
+            Visiter le site de {{ ed.school }}
+            <span class="external-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </ng-container>
+        <ng-template #legacyDiploma>
+          <button class="btn-diploma-small" *ngIf="ed.diploma" (click)="toggleDiploma(i)">
+            {{ isDiplomaVisible(i) ? 'Masquer' : 'Voir diplôme' }}
+          </button>
+          <div class="diploma-message" *ngIf="isDiplomaVisible(i)">
+            <p>Diplôme non disponible</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+
+  <!-- transcript kept for later -->
+</section>
