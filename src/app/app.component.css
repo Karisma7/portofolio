@@ -47,8 +47,12 @@ footer{padding:18px 0;text-align:center;color:#666}
 
 /* Header styles */
 .header-content{display:flex;justify-content:space-between;align-items:center}
-.hamburger-menu{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:4px;z-index:1001}
-.hamburger-menu span{display:block;width:25px;height:3px;background:#fff;transition:all 0.3s ease;border-radius:2px}
+.header-content{display:flex;justify-content:space-between;align-items:center;position:relative}
+.hamburger-menu{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:6px;z-index:1001;transition:transform 0.12s ease, box-shadow 0.12s ease}
+.hamburger-menu span{display:block;width:28px;height:3px;background:#fff;transition:all 0.25s ease;border-radius:3px}
+.hamburger-menu:hover{transform:scale(1.08);box-shadow:0 6px 14px rgba(2,6,23,0.18)}
+.hamburger-menu:active{transform:scale(0.96)}
+.hamburger-menu:focus{outline:2px solid rgba(255,255,255,0.18);outline-offset:4px}
 .hamburger-menu.active span:nth-child(1){transform:rotate(45deg) translate(7px,7px)}
 .hamburger-menu.active span:nth-child(2){opacity:0}
 .hamburger-menu.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
@@ -70,6 +74,17 @@ footer{padding:18px 0;text-align:center;color:#666}
   /* Hamburger menu visible en mobile */
   .hamburger-menu{display:flex}
   .header-profile{display:block}
+
+  /* Simple pulsing hint next to the hamburger to invite click */
+  .menu-hint{position:absolute;left:56px;top:50%;transform:translateY(-50%);background:var(--accent);color:#fff;padding:6px 10px;border-radius:18px;font-size:13px;font-weight:700;box-shadow:0 8px 18px rgba(2,6,23,0.12);opacity:0;z-index:1003;pointer-events:none}
+  .menu-hint{animation:hintPulse 2.8s ease-in-out infinite}
+
+  @keyframes hintPulse{
+    0%{opacity:0;transform:translateY(-50%) scale(0.98)}
+    10%{opacity:1;transform:translateY(-50%) scale(1)}
+    60%{opacity:0.95;transform:translateY(-50%) scale(1.02)}
+    100%{opacity:0}
+  }
   
   /* Menu déroulant */
   .top-rubriques{position:fixed;top:66px;left:0;right:0;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.15);transform:translateY(-120%);transition:transform 0.3s ease;z-index:1000;max-height:calc(100vh - 66px);overflow-y:auto}
