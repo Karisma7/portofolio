@@ -284,6 +284,7 @@ export class PortfolioDataService {
 
   contact = {
     email: 'atebabasile@gmail.com',
+    phone: '0753026379',
     cv: 'assets/ASSIGA-ATEBA-Basile-CV-IF.pdf',
     // Use the provided profile picture if available (placed under assets/logos/pp.jpeg)
     photo: 'assets/logos/pp.jpeg'
