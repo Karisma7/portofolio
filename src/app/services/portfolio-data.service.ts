@@ -164,7 +164,7 @@ export class PortfolioDataService {
   // ];
 
   publications = [
-    { title: 'Deployment of a Backbone Operator (IJ-ECS article)', url: 'https://www.ijecs.in/index.php/ijecs/article/view/4974', summary: 'Article décrivant le déploiement d\'une dorsale opérateur et les choix d\'architecture.' },
+    { title: 'A memetic algorithm approach for the planning and optimization of a new-generation cellular network capitalizing on existing sites (IJ-ECS article)', url: 'https://www.ijecs.in/index.php/ijecs/article/view/4974', summary: 'Article décrivant le déploiement d\'une dorsale opérateur et les choix d\'architecture.' },
     { title: 'Deployment of a Backbone operator and BGP traffic Engineering (ResearchGate)', url: 'https://www.researchgate.net/publication/372138888_Deployment_of_a_Backbone_operator_and_BGP_traffic_Engineering', summary: 'Publication technique sur l\'ingénierie BGP et optimisation du routage.' }
   ];
 
