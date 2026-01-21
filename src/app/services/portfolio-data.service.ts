@@ -159,7 +159,7 @@ export class PortfolioDataService {
   //   ]},
   //   { period: 'Été 2022', items: [
   //     { title: 'Développement de carrière aux cycles supérieurs', grade: 'S' },
-  //     { title: 'Robots industriels', grade: 'A-' }
+  //     { title: 'Robots industriels', grade: 'A-'..... }
   //   ]}
   // ];
 
