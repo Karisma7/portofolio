@@ -29,7 +29,7 @@ export class PortfolioDataService {
       company: 'Forum Associatif Tous Ensemble',
       role: 'Développeur Fullstack',
       period: 'Juin 2025 à Septembre 2025',
-      description: `A l'occasion de ses 25 ans d'existence, le groupe a décidé de renforcer sa visibilité et son engagement citoyen auprès de ses partenaires ainsi que du grand public, en valorisant ses activités (sur le web) et en créant une plateforme web dédiée aux porteurs de projets issus des quartiers populaires. Résultat : augmentation des prises de contact de 0 à plus de 7 par semaine.`,
+      description: `A l'occasion de ses 25 ans d'existence, le groupe a décidé de renforcer sa visibilité et son engagement citoyen auprès de ses partenaires ainsi que du grand public, en valorisant ses activités (sur le web) et en créant une plateforme web dédiée aux porteurs de projets issus des quartiers populaires.`,
       projects: [
         {
           title: 'Refonte du site Web',
@@ -68,8 +68,10 @@ export class PortfolioDataService {
       company: 'Lima Survey',
       role: 'Ingénieur informatique',
       period: '07-2022 – 07-2024 | Yaoundé, Cameroun (2 ans)',
-      description: `Déploiement, exploitation et support d'une infrastructure IT dans le cadre des activités de la structure.`,
-      project: `Déploiement et maintenance d'infrastructures IT critiques`,
+      description: ` Dans le cadre de son activité, la structure souhaitait disposer d’une 
+                    infrastructure informatique fiable et performante afin d’améliorer la 
+                    communication et la connectivité entre les différents équipements.`,
+      project: `Déploiement, exploitation et support d'une infrastructure IT dans le cadre des activités de la structure.`,
       tasks: [
         "Déployer et maintenir les infrastructures IT critiques",
         "Gérer plus de 30 équipements (serveurs, routeurs, postes clients)",
@@ -83,7 +85,9 @@ export class PortfolioDataService {
       company: 'Lima Survey',
       role: 'Ingénieur informatique',
       period: '02-2021 – 07-2021 | Yaoundé, Cameroun (6 mois)',
-      description: `Déploiement, exploitation et support d'une infrastructure IT dans le cadre des activités de la structure.`,
+      description: `Dans le cadre de son activité, la structure souhaitait disposer d’une 
+                    infrastructure informatique fiable et performante afin d’améliorer la 
+                    communication et la connectivité entre les différents équipements.`,
       project: `Déploiement et maintenance d'infrastructures IT`,
       tasks: [
         "Déployer et mettre en service les équipements informatiques",
@@ -217,7 +221,7 @@ export class PortfolioDataService {
       company: 'École Nationale Supérieure Polytechnique de Douala',
       logo: 'assets/logos/ensp-douala.jpg',
       period: '2021 – 2022',
-      summary: "Projet académique de conception et développement d'un outil de planification pour réseau cellulaire nouvelle génération.",
+      summary: "Projet de recherche de conception et développement d'un outil de planification pour réseau cellulaire nouvelle génération.",
       description: `Projet de recherche et développement réalisé dans le cadre de la formation à Polytechnique, visant à créer un outil de planification pour les réseaux cellulaires de nouvelle génération.`,
       details: `L'objectif était de concevoir et développer un outil algorithmique permettant d'optimiser la planification et le déploiement de réseaux cellulaires nouvelle génération en tenant compte des contraintes de couverture, capacité et qualité de service.`,
       tasks: [
