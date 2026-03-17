@@ -1,38 +1,327 @@
-.projects-card { padding:16px; background:var(--card); border-radius:8px; }
-.projects-card .timeline { display:flex; flex-direction:column; gap:14px }
-.projects-card .timeline .job { display:flex; gap:18px; padding:12px 0; border-bottom:1px solid rgba(15,23,33,0.04); align-items:flex-start }
-.projects-card .timeline .when { width:160px; color:var(--muted); font-size:13px; display:flex; flex-direction:column; align-items:center }
-.projects-card .timeline .when .period{ text-align:center }
-.projects-card .timeline .when .logo{ margin-top:8px }
-.projects-card .timeline .when .logo img{ width:100%; max-width:140px; height:auto; object-fit:contain; border-radius:6px; display:block }
-.projects-card .timeline .what { flex:1 }
-.projects-card .timeline .what h3 { margin:0; font-size:16px }
-.projects-card .timeline .company-head{display:flex;align-items:center}
-.projects-card .company{color:var(--muted);font-size:13px}
-.projects-card .desc{margin:8px 0;color:var(--text)}
-.projects-card .summary { margin:8px 0; color:var(--muted) }
-.projects-card .context { background:transparent; border-left:4px solid rgba(15,23,33,0.04); padding:8px 12px; margin:10px 0 }
-.projects-card .responsibilities ul { margin:6px 0 0 18px; color:#374151 }
-.projects-card .tech { color:var(--muted); font-size:13px; margin-top:8px; display:flex; gap:8px; flex-wrap:wrap }
-.projects-card .tech .tag{background:rgba(2,6,23,0.04); padding:6px 10px; border-radius:999px; font-size:12px}
-.projects-card .card-footer{margin-top:10px}
-.projects-card .btn{color:#1976d2;text-decoration:none;font-weight:600}
-.projects-card .empty{color:#777;padding:12px}
-
-@media(max-width:904px){
-	.projects-card .timeline .job{flex-direction:column; gap:10px}
-	.projects-card .timeline .when{width:auto; flex-direction:row; justify-content:flex-start; gap:12px; align-items:center}
-	.projects-card .timeline .when .period{text-align:left}
-	.projects-card .timeline .when .logo{margin-top:0}
-	.projects-card .timeline .when .logo img{max-width:60px}
-	.projects-card .timeline .what h3{font-size:15px}
-	.projects-card{padding:12px}
+.projects-card { 
+  padding: 16px; 
+  background: var(--card); 
+  border-radius: 8px; 
 }
 
-.projects-links{margin-top:18px;padding-top:10px;border-top:1px dashed rgba(15,23,33,0.04)}
-.projects-links h3{margin:0 0 8px;font-size:15px}
-.projects-links ul{list-style:none;padding:0;margin:0}
-.projects-links li{margin:6px 0}
-.projects-links a{color:var(--text);text-decoration:none}
-.projects-links a:hover{text-decoration:underline}
-.projects-links .company{color:var(--muted);font-size:13px;margin-left:6px}
+.projects-card .timeline { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 14px;
+}
+
+.projects-card .timeline .job { 
+  display: flex; 
+  gap: 18px; 
+  padding: 12px 0; 
+  border-bottom: 1px solid rgba(15,23,33,0.04); 
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.projects-card .timeline .job:hover {
+  background: rgba(25,118,210,0.04);
+  border-left: 4px solid rgba(25,118,210,0.3);
+  padding: 12px 12px 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(25,118,210,0.08);
+  cursor: pointer;
+}
+
+.projects-card .timeline .job.expanded {
+  padding: 20px;
+  background: rgba(25,118,210,0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(25,118,210,0.1);
+  border-bottom: 2px solid rgba(25,118,210,0.2);
+  margin-bottom: 8px;
+}
+
+.projects-card .timeline .when { 
+  width: 160px; 
+  color: var(--muted); 
+  font-size: 13px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.projects-card .timeline .when .period { 
+  text-align: center;
+}
+
+.projects-card .timeline .when .logo { 
+  margin-top: 8px;
+}
+
+.projects-card .timeline .when .logo img { 
+  width: 100%; 
+  max-width: 140px; 
+  height: auto; 
+  object-fit: contain; 
+  border-radius: 6px; 
+  display: block;
+}
+
+.projects-card .timeline .what { 
+  flex: 1;
+}
+
+.header-summary {
+  margin-bottom: 12px;
+}
+
+.projects-card .timeline .what h3 { 
+  margin: 0; 
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.projects-card .timeline .company-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.projects-card .company {
+  color: var(--muted);
+  font-size: 13px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.projects-card .desc {
+  margin: 8px 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.projects-card .summary { 
+  margin: 8px 0; 
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tech-summary {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.tech-summary .tag {
+  background: rgba(25,118,210,0.08);
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid rgba(25,118,210,0.2);
+}
+
+.expand-btn, .collapse-btn {
+  background: none;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px 12px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.expand-btn:hover, .collapse-btn:hover {
+  background: rgba(25,118,210,0.08);
+  transform: translateX(2px);
+}
+
+.expand-icon {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.collapse-icon {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.expanded-content {
+  animation: slideDown 0.3s ease;
+  border-top: 1px solid rgba(25,118,210,0.2);
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  to {
+    opacity: 1;
+    max-height: 2000px;
+    overflow: visible;
+  }
+}
+
+.projects-card .context { 
+  background: rgba(25,118,210,0.04);
+  border-left: 4px solid rgba(25,118,210,0.3); 
+  padding: 8px 12px; 
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.projects-card .context h4 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.projects-card .context p {
+  margin: 0;
+  font-size: 14px;
+  color: #5a6c7d;
+  line-height: 1.5;
+}
+
+.projects-card .responsibilities {
+  margin: 12px 0;
+}
+
+.projects-card .responsibilities h4 { 
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.projects-card .responsibilities ul { 
+  margin: 6px 0 0 18px; 
+  color: #374151;
+  list-style-type: disc;
+}
+
+.projects-card .responsibilities li {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.projects-card .achievements {
+  margin: 12px 0;
+}
+
+.projects-card .achievements h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.projects-card .achievements ul {
+  margin: 6px 0 0 18px;
+  color: #374151;
+  list-style-type: check;
+}
+
+.projects-card .achievements li {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.projects-card .tech { 
+  color: var(--muted); 
+  font-size: 13px; 
+  margin-top: 8px; 
+  display: flex; 
+  gap: 8px; 
+  flex-wrap: wrap;
+}
+
+.projects-card .tech .tag {
+  background: rgba(2,6,23,0.04); 
+  padding: 6px 10px; 
+  border-radius: 999px; 
+  font-size: 12px;
+}
+
+.projects-card .card-footer {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.projects-card .btn {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.projects-card .btn:hover {
+  background: rgba(25,118,210,0.08);
+  transform: translateX(2px);
+}
+
+.projects-card .empty {
+  color: #777;
+  padding: 12px;
+  font-size: 14px;
+}
+
+@media(max-width:904px){
+  .projects-card .timeline .job{
+    flex-direction: column; 
+    gap: 10px;
+  }
+  .projects-card .timeline .when{
+    width: auto; 
+    flex-direction: row; 
+    justify-content: flex-start; 
+    gap: 12px; 
+    align-items: center;
+  }
+  .projects-card .timeline .when .period{
+    text-align: left;
+  }
+  .projects-card .timeline .when .logo{
+    margin-top: 0;
+  }
+  .projects-card .timeline .when .logo img{
+    max-width: 60px;
+  }
+  .projects-card .timeline .what h3{
+    font-size: 15px;
+  }
+  .projects-card{
+    padding: 12px;
+  }
+
+  .tech-summary {
+    gap: 4px;
+  }
+  
+  .tech-summary .tag {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+
+  .projects-card .timeline {
+    gap: 10px;
+  }
+}

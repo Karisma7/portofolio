@@ -11,4 +11,12 @@ import { PortfolioDataService } from '../services/portfolio-data.service';
 })
 export class SkillsComponent {
   constructor(public data: PortfolioDataService) {}
+
+  getTechGroups() {
+    const technical = this.data.skills.technical as any;
+    return Object.keys(technical).map(groupName => ({
+      name: groupName,
+      skills: technical[groupName]
+    }));
+  }
 }

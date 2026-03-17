@@ -7,20 +7,29 @@ export class PortfolioDataService {
   about = `Passionné par l’informatique, j’ai acquis au fil de mes expériences d’excellentes compétences en infrastructure IT ainsi qu’en développement. Rigoureux, réactif et doté d’une excellente capacité d’adaptation, je suis prêt à relever de nouveaux défis au sein d’une organisation collaborative et stimulante, où je pourrais mettre à profit mes compétences. Participer à des projets innovants, qu’il s’agisse de la mise en place, de l’optimisation ou de la maintenance d’architectures informatiques ou applicatives, représente pour moi une réelle source de motivation et un moteur dans mon évolution professionnelle.`;
 
   skills = {
-    technical: [
-      'Java', 'PHP', 'SQL', 'C++', 'TypeScript', 'Angular', 'SpringBoot', 'Firebase', 'Maven', 'Hibernate', 'Laravel',
-      'HTML', 'CSS', 'SASS', 'REST APIs', 'Unit testing (JUnit)', 'PostgreSQL', 'MongoDB', 'MySQL',
-      'Git', 'GitHub Actions', 'Docker', 'DockerHub', 'Jenkins', 'Netbeans', 'IntelliJ', 'Visual Studio Code',
-      'Apache Tomcat', 'Nginx', 'OVHcloud (VPS)', 'Windows', 'Linux', 'Windows Server ( administration )', 'VMware',
-      'Postman', 'Arduino', 'Monitoring', 'CI/CD pipelines', 'IPv4/IPv6', 'DHCP/DNS', 'VoIP', 'SSH/RDP', 'Routage statique et dynamique',
-      'IP/MPLS', 'BGP', 'OSPF', 'IS-IS', 'RIP', 'Wireshark', 'eNSP (Huawei)'
-    ],
+    technical: {
+      'Langages': ['Java', 'PHP', 'SQL'],
+      'Frameworks & Librairies': ['Angular', 'SpringBoot', 'Laravel'],
+      'Bases de données': ['PostgreSQL', 'MongoDB', 'MySQL'],
+      'Outils de développement': ['Maven', 'Netbeans', 'IntelliJ', 'Visual Studio Code', 'Postman','GitHub', 'Unit testing (JUnit)'],
+      'Versioning & CI/CD': ['GitHub Actions', 'Jenkins'],
+      'Conteneurisation': ['Docker', 'DockerHub'],
+      'Cloud & hébergement': ['OVHcloud', 'Firebase'],
+      'CMS & No-Code': ['Webflow', 'Memberstack'],
+      'Web & APIs': ['REST APIs'],
+      'Serveurs & Infrastructure': ['Apache Tomcat', 'Nginx', 'OVHcloud (VPS)'],
+      'Systèmes & Administration': ['Windows', 'Linux', 'Windows Server (administration)', 'Active Directory'],
+      'Virtualisation': ['VMware'],
+      'Réseau': ['IPv4/IPv6', 'DHCP/DNS', 'VoIP', 'SMTP', 'Routage statique et dynamique', 'IP/MPLS', 'BGP', 'OSPF', 'IS-IS', 'RIP'],
+      'Outils Réseau': ['Wireshark', 'eNSP (Huawei)', 'Cisco'],
+      'IoT & Embedded': ['Arduino'],
+    },
     functional: [
-      'Capacité d’adaptation', 'Coordonner l’activité d’une équipe', 'Analyser les besoins clients',
+      'Capacité d’adaptation', 'Travail d\'équipe', 'Coordonner l’activité d’une équipe', 'Analyser les besoins clients',
       'Élaboration de cahiers des charges', 'Rédaction de spécifications fonctionnelles et techniques',
       'Tests & recette', 'design / maquettage',
       'Agile (Scrum)', 'Rédiger une documentation technique', 'Persévérance', 'Goût du challenge',
-      'Contrôler la conformité d’un produit', 'Travail d\'équipe'
+      'Contrôler la conformité d’un produit', 
     ]
   };
 
@@ -62,7 +71,8 @@ export class PortfolioDataService {
         }
       ]
       ,
-      logo: 'assets/logos/forum-associatif-tous-ensemble.png'
+      logo: 'assets/logos/forum-associatif-tous-ensemble.png',
+      tech: ['PHP','Laravel','Angular','SpringBoot','PostgreSQL','MongoDB','MySQL','Docker','Jenkins','Git']
     },
     {
       company: 'Lima Survey',
@@ -175,6 +185,49 @@ export class PortfolioDataService {
   // Liste des projets 
   projects = [
     {
+      title: "Création d'une interface de mise en relation et d'accompagnement pour les projets immobiliers",
+      company: 'Diaspora Immobilier CI',
+      logo: 'assets/logos/diaspoimmo.jpg',
+      period: '2026 – En cours',
+      summary: "Développement d'une plateforme web pour connecter les investisseurs et les porteurs de projets immobiliers en Côte d'Ivoire.",
+      description: `Création d'une plateforme web innovante dédiée à mettre en relation les investisseurs et les porteurs de projets immobiliers en Côte d'Ivoire, facilitant l'accompagnement et le financement de projets.`,
+      details: `La plateforme offre un espace d'échange, de présentation de projets et de mise en relation optimisée. Elle intègre des outils de gestion de profil, de présentation de projets, et de communication entre les différents acteurs.`,
+      tasks: [
+        "Definir l'architecture des differentes collections",
+        "Ajouter des composants graphiques et de nombreux filtres",
+        "Développer les fonctionnalités de gestion de profil et de projets",
+        "Mettre en place les CGU, la politique de confidentialité et les mentions légales, la gestion des cookies et la conformité RGPD",
+      ],
+      achievements: [
+        "Plateforme opérationnelle et en ligne",
+        "Interface ergonomique favorisant la mise en relation"
+      ],
+      tech: ['Webflow','Memberstack'],
+      url: 'https://www.diasporaimmobilierci.com/'
+    },
+    {
+      title: "Création d'une plateforme collaborative de partage",
+      period: '11/2025 – En cours',
+      summary: "Développement d'une plateforme collaborative permettant le partage de ressources et la collaboration en temps réel entre utilisateurs.",
+      description: `Plateforme web moderne dédiée à la collaboration et au partage de ressources. Elle offre des fonctionnalités de communication en temps réel, de gestion de projets collaboratifs et de partage sécurisé de fichiers.`,
+      details: `Le projet intègre une architecture microservices robuste avec communication asynchrone via RabbitMQ /(Kafka), des bases de données PostgreSQL pour les données relationnelles et MongoDB pour les données semi-structurées, des websockets pour une communication en temps réel.`,
+      tasks: [
+        // "Concevoir l'architecture microservices et les patterns de communication asynchrone",
+        // "Développer le frontend avec Angular pour une UX fluide",
+        // "Implémenter les services backend avec Spring Boot",
+        // "Mettre en place la communication en temps réel avec WebSockets",
+        // "Configurer RabbitMQ pour la messagerie asynchrone",
+        // "Dockeriser l'ensemble des services",
+        // "Gérer les données avec PostgreSQL et MongoDB",
+        // "intégrer des outils de monitoring gérés par des LLM et de publicationpour assurer la performance et la fiabilité de la plateforme"
+      ],
+      achievements: [
+        "Plateforme en phase de développement actif"
+      ],
+      tech: ['Angular','Spring Boot','WebSocket','RabbitMQ','PostgreSQL','MongoDB','Docker'],
+      url: ''
+    },
+    {
       title: 'PlateformeWeb & API – Services Minutes',
       company: 'Services Minutes',
       logo: 'assets/logos/services-minutes.png',
@@ -234,6 +287,21 @@ export class PortfolioDataService {
       url: ''
     },
     {
+      title: "Déploiement réseau téléphonique IP (particulier)",
+      period: '2021',
+      summary: "Déploiement d'un réseau téléphonique IP pour un particulier : 15 postes IP (Grandstream), auto‑com Grandstream, amplificateurs, convertisseurs analogiques et câblage structuré.",
+      url: '',
+      details: `Contexte : Dans le but de moderniser l'infrastructure téléphonique, d'améliorer la qualité audio et la gestion des communications, un particulier a decidé d'installer un réseau téléphonique IP complet.`,
+      tasks: [
+        "Étude des besoins et dimensionnement de la solution (nombre de postes, qualité audio)",
+        "Installation et configuration de l'auto‑com Grandstream (IP-PBX) et des postes IP",
+        "Câblage structuré et alimentation PoE des postes, intégration d'un amplificateur",
+        "Installation de convertisseurs analogiques,",
+        "Tests de QoS, validation des appels et documentation de l'installation"
+      ],
+      tech: ['Grandstream','SIP','VoIP','IP Phones','Analog gateways','PoE','Câblage','QoS', 'baie de brassage', 'panneaux de brassage', 'switchs' ],
+    },
+    {
       title: "Etude et proposition de déploiement d'un Backbone IP/MPLS",
       company: 'École Nationale Supérieure Polytechnique de Douala',
       logo: 'assets/logos/camtel.png',
@@ -251,21 +319,6 @@ export class PortfolioDataService {
       ],
       tech: ['eNSP (Huawei)','Wireshark','Routage statique','Routage dynamique','IP/MPLS','BGP','VMWare'],
       url: ''
-    },
-    {
-      title: "Déploiement réseau téléphonique IP (particulier)",
-      period: '2021',
-      summary: "Déploiement d'un réseau téléphonique IP pour un particulier : 15 postes IP (Grandstream), auto‑com Grandstream, amplificateurs, convertisseurs analogiques et câblage structuré.",
-      url: '',
-      details: `Contexte : Dans le but de moderniser l'infrastructure téléphonique, d'améliorer la qualité audio et la gestion des communications, un particulier a decidé d'installer un réseau téléphonique IP complet.`,
-      tasks: [
-        "Étude des besoins et dimensionnement de la solution (nombre de postes, qualité audio)",
-        "Installation et configuration de l'auto‑com Grandstream (IP-PBX) et des postes IP",
-        "Câblage structuré et alimentation PoE des postes, intégration d'un amplificateur",
-        "Installation de convertisseurs analogiques,",
-        "Tests de QoS, validation des appels et documentation de l'installation"
-      ],
-      tech: ['Grandstream','SIP','VoIP','IP Phones','Analog gateways','PoE','Câblage','QoS', 'baie de brassage', 'panneaux de brassage', 'switchs' ],
     }
   ];
 

@@ -10,6 +10,8 @@ import { PortfolioDataService } from '../services/portfolio-data.service';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
+  expandedItems = new Set<number>();
+
   constructor(public data: PortfolioDataService) {}
 
   // Return projects sorted by period (most recent first).
@@ -25,5 +27,17 @@ export class ProjectsComponent {
     };
     arr.sort((a, b) => parseYear(b) - parseYear(a));
     return arr;
+  }
+
+  toggleExpand(index: number) {
+    if (this.expandedItems.has(index)) {
+      this.expandedItems.delete(index);
+    } else {
+      this.expandedItems.add(index);
+    }
+  }
+
+  isExpanded(index: number): boolean {
+    return this.expandedItems.has(index);
   }
 }

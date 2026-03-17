@@ -10,5 +10,19 @@ import { PortfolioDataService } from '../services/portfolio-data.service';
   styleUrls: ['./experiences.component.css']
 })
 export class ExperiencesComponent {
+  expandedItems = new Set<number>();
+
   constructor(public data: PortfolioDataService) {}
+
+  toggleExpand(index: number) {
+    if (this.expandedItems.has(index)) {
+      this.expandedItems.delete(index);
+    } else {
+      this.expandedItems.add(index);
+    }
+  }
+
+  isExpanded(index: number): boolean {
+    return this.expandedItems.has(index);
+  }
 }

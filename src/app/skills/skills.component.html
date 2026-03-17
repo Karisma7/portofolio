@@ -1,17 +1,44 @@
 <section class="skills-card">
   <h2>Compétences</h2>
 
-  <div class="tech">
-    <h4>Technique <span class="count">({{ data.skills.technical.length }})</span></h4>
-    <div class="tags">
-      <span class="tag" *ngFor="let s of data.skills.technical">{{ s }}</span>
+  <div class="skills-grid">
+    <!-- Section Technique -->
+    <div class="skill-section tech-section">
+      <div class="section-header">
+        <h3>
+          <span class="section-icon">⚙️</span>
+          Technique
+        </h3>
+      </div>
+      
+      <!-- Groupes de compétences techniques -->
+      <div class="tech-groups">
+        <div class="tech-group" *ngFor="let group of getTechGroups()">
+          <h4 class="group-title">{{ group.name }}</h4>
+          <div class="tags-container">
+            <span class="tag tech-tag" *ngFor="let s of group.skills">
+              <span class="tag-label">{{ s }}</span>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="functional">
-    <h4>Fonctionnel <span class="count">({{ data.skills.functional.length }})</span></h4>
-    <ul>
-      <li *ngFor="let s of data.skills.functional">{{ s }}</li>
-    </ul>
+    <!-- Section Fonctionnel -->
+    <div class="skill-section functional-section">
+      <div class="section-header">
+        <h3>
+          <span class="section-icon">💼</span>
+          Fonctionnel
+        </h3>
+        <span class="count">({{ data.skills.functional.length }})</span>
+      </div>
+      <ul class="functional-list">
+        <li *ngFor="let s of data.skills.functional">
+          <span class="bullet">✓</span>
+          <span class="item-text">{{ s }}</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>

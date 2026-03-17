@@ -7,7 +7,6 @@ import { SkillsComponent } from './skills/skills.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectLinksComponent } from './project-links/project-links.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { ReferencesComponent } from './references/references.component';
 import { ContributionsComponent } from './contributions/contributions.component';
 import { CvComponent } from './cv/cv.component';
@@ -15,7 +14,7 @@ import { CvComponent } from './cv/cv.component';
 @Component({
   standalone: true,
   selector: 'app-root',
-  imports: [CommonModule, ProfileComponent, FormationComponent, SkillsComponent, ExperiencesComponent, ProjectsComponent, ProjectLinksComponent, GalleryComponent, ReferencesComponent, ContributionsComponent, CvComponent],
+  imports: [CommonModule, ProfileComponent, FormationComponent, SkillsComponent, ExperiencesComponent, ProjectsComponent, ProjectLinksComponent, ReferencesComponent, ContributionsComponent, CvComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
