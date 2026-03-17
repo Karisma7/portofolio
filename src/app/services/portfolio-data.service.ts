@@ -212,14 +212,15 @@ export class PortfolioDataService {
       description: `Plateforme web moderne dédiée à la collaboration et au partage de ressources. Elle offre des fonctionnalités de communication en temps réel, de gestion de projets collaboratifs et de partage sécurisé de fichiers.`,
       details: `Le projet intègre une architecture microservices robuste avec communication asynchrone via RabbitMQ /(Kafka), des bases de données PostgreSQL pour les données relationnelles et MongoDB pour les données semi-structurées, des websockets pour une communication en temps réel.`,
       tasks: [
-        // "Concevoir l'architecture microservices et les patterns de communication asynchrone",
-        // "Développer le frontend avec Angular pour une UX fluide",
-        // "Implémenter les services backend avec Spring Boot",
-        // "Mettre en place la communication en temps réel avec WebSockets",
-        // "Configurer RabbitMQ pour la messagerie asynchrone",
-        // "Dockeriser l'ensemble des services",
-        // "Gérer les données avec PostgreSQL et MongoDB",
-        // "intégrer des outils de monitoring gérés par des LLM et de publicationpour assurer la performance et la fiabilité de la plateforme"
+        "Concevoir l'architecture microservices et les patterns de communication asynchrone",
+        "Développer le frontend avec Angular pour une UX fluide",
+        "Implémenter les services backend  avec Spring Boot",
+        "Implémenter les services frontend  avec Angular",
+        "Mettre en place la communication en temps réel avec WebSockets",
+        "Configurer RabbitMQ/Kafka pour la messagerie asynchrone entre les services",
+        "Dockeriser l'ensemble des services",
+        "Gérer les données avec PostgreSQL et MongoDB en fonction des diffents services" ,
+        "intégrer des systemes de monitoring et de publications gérés par des agents AI pour assurer l'alimentation, la performance et la fiabilité de la plateforme"
       ],
       achievements: [
         "Plateforme en phase de développement actif"
