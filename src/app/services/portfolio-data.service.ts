@@ -12,7 +12,7 @@ export class PortfolioDataService {
       'Frameworks & Librairies': ['Angular', 'SpringBoot', 'Laravel'],
       'Bases de données': ['PostgreSQL', 'MongoDB', 'MySQL'],
       'Outils de développement': ['Maven', 'Netbeans', 'IntelliJ', 'Visual Studio Code', 'Postman','GitHub', 'Unit testing (JUnit)'],
-      'Versioning & CI/CD': ['GitHub Actions', 'Jenkins'],
+      'Versioning & CI/CD': ['Git','GitHub Actions', 'Jenkins'],
       'Conteneurisation': ['Docker', 'DockerHub'],
       'Cloud & hébergement': ['OVHcloud', 'Firebase'],
       'CMS & No-Code': ['Webflow', 'Memberstack'],
@@ -206,10 +206,10 @@ export class PortfolioDataService {
       url: 'https://www.diasporaimmobilierci.com/'
     },
     {
-      title: "Création d'une plateforme collaborative de partage",
+      title: "Création d'une plateforme / réseau social de partage d'experiences et de ressources pour les étudiants et professionnels de tous les domaines",
       period: '11/2025 – En cours',
-      summary: "Développement d'une plateforme collaborative permettant le partage de ressources et la collaboration en temps réel entre utilisateurs.",
-      description: `Plateforme web moderne dédiée à la collaboration et au partage de ressources. Elle offre des fonctionnalités de communication en temps réel, de gestion de projets collaboratifs et de partage sécurisé de fichiers.`,
+      summary: "Développement d'une plateforme collaborative permettant le partage de ressources et la communication en temps réel entre utilisateurs.",
+      description: `Plateforme web moderne dédiée à la collaboration et au partage de ressources / actualités. Elle offre des fonctionnalités de communication en temps réel et de partage de fichiers.`,
       details: `Le projet intègre une architecture microservices robuste avec communication asynchrone via RabbitMQ /(Kafka), des bases de données PostgreSQL pour les données relationnelles et MongoDB pour les données semi-structurées, des websockets pour une communication en temps réel.`,
       tasks: [
         "Concevoir l'architecture microservices et les patterns de communication asynchrone",
@@ -225,7 +225,7 @@ export class PortfolioDataService {
       achievements: [
         "Plateforme en phase de développement actif"
       ],
-      tech: ['Angular','Spring Boot','WebSocket','RabbitMQ','PostgreSQL','MongoDB','Docker'],
+      tech: ['Angular','Spring Boot','WebSocket','RabbitMQ','PostgreSQL','MongoDB','Docker, miscroservices','AI agents'],
       url: ''
     },
     {
