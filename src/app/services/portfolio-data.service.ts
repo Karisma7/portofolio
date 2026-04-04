@@ -35,6 +35,7 @@ export class PortfolioDataService {
 
   experiences = [
     {
+      // Expérience la plus récente en premier
       company: 'Forum Associatif Tous Ensemble',
       role: 'Développeur Fullstack',
       period: 'Juin 2025 à Septembre 2025',
