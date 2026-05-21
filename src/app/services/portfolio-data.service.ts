@@ -227,7 +227,7 @@ export class PortfolioDataService {
         "Plateforme en phase de développement actif"
       ],
       tech: ['Angular','Spring Boot','WebSocket','RabbitMQ','PostgreSQL','MongoDB','Docker, miscroservices','AI agents'],
-      url: ''
+      url: 'myspace.revodit.com'
     },
     {
       title: 'PlateformeWeb & API – Services Minutes',
