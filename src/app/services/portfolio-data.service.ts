@@ -207,7 +207,7 @@ export class PortfolioDataService {
       url: 'https://www.diasporaimmobilierci.com/'
     },
     {
-      title: "Création d'une plateforme / réseau social de partage d'experiences et de ressources pour les étudiants et professionnels de tous les domaines",
+      title: "Plateforme / réseau social de partage d'experiences et de ressources pour les étudiants et professionnels de tous les domaines",
       period: '11/2025 – En cours',
       summary: "Développement d'une plateforme collaborative permettant le partage de ressources et la communication en temps réel entre utilisateurs.",
       description: `Plateforme web moderne dédiée à la collaboration et au partage de ressources / actualités. Elle offre des fonctionnalités de communication en temps réel et de partage de fichiers.`,
@@ -227,7 +227,7 @@ export class PortfolioDataService {
         "Plateforme en phase de développement actif"
       ],
       tech: ['Angular','Spring Boot','WebSocket','RabbitMQ','PostgreSQL','MongoDB','Docker, miscroservices','AI agents'],
-      url: 'myspace.revodit.com'
+      url: 'https://www.myspace.revodit.com'
     },
     {
       title: 'PlateformeWeb & API – Services Minutes',
