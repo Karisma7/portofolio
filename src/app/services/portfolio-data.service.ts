@@ -185,27 +185,27 @@ export class PortfolioDataService {
 
   // Liste des projets 
   projects = [
-    {
-      title: "Création d'une interface de mise en relation et d'accompagnement pour les projets immobiliers",
-      company: 'Diaspora Immobilier CI',
-      logo: 'assets/logos/diaspoimmo.jpg',
-      period: '2026 – En cours',
-      summary: "Développement d'une plateforme web pour connecter les investisseurs et les porteurs de projets immobiliers en Côte d'Ivoire.",
-      description: `Création d'une plateforme web innovante dédiée à mettre en relation les investisseurs et les porteurs de projets immobiliers en Côte d'Ivoire, facilitant l'accompagnement et le financement de projets.`,
-      details: `La plateforme offre un espace d'échange, de présentation de projets et de mise en relation optimisée. Elle intègre des outils de gestion de profil, de présentation de projets, et de communication entre les différents acteurs.`,
-      tasks: [
-        "Definir l'architecture des differentes collections",
-        "Ajouter des composants graphiques et de nombreux filtres",
-        "Développer les fonctionnalités de gestion de profil et de projets",
-        "Mettre en place les CGU, la politique de confidentialité et les mentions légales, la gestion des cookies et la conformité RGPD",
-      ],
-      achievements: [
-        "Plateforme opérationnelle et en ligne",
-        "Interface ergonomique favorisant la mise en relation"
-      ],
-      tech: ['Webflow','Memberstack'],
-      url: 'https://www.diasporaimmobilierci.com/'
-    },
+    // {
+    //   title: "Création d'une interface de mise en relation et d'accompagnement pour les projets immobiliers",
+    //   company: 'Diaspora Immobilier CI',
+    //   logo: 'assets/logos/diaspoimmo.jpg',
+    //   period: '2026 – En cours',
+    //   summary: "Développement d'une plateforme web pour connecter les investisseurs et les porteurs de projets immobiliers en Côte d'Ivoire.",
+    //   description: `Création d'une plateforme web innovante dédiée à mettre en relation les investisseurs et les porteurs de projets immobiliers en Côte d'Ivoire, facilitant l'accompagnement et le financement de projets.`,
+    //   details: `La plateforme offre un espace d'échange, de présentation de projets et de mise en relation optimisée. Elle intègre des outils de gestion de profil, de présentation de projets, et de communication entre les différents acteurs.`,
+    //   tasks: [
+    //     "Definir l'architecture des differentes collections",
+    //     "Ajouter des composants graphiques et de nombreux filtres",
+    //     "Développer les fonctionnalités de gestion de profil et de projets",
+    //     "Mettre en place les CGU, la politique de confidentialité et les mentions légales, la gestion des cookies et la conformité RGPD",
+    //   ],
+    //   achievements: [
+    //     "Plateforme opérationnelle et en ligne",
+    //     "Interface ergonomique favorisant la mise en relation"
+    //   ],
+    //   tech: ['Webflow','Memberstack'],
+    //   url: 'https://www.diasporaimmobilierci.com/'
+    // },
     {
       title: "Plateforme / réseau social de partage d'experiences et de ressources pour les étudiants et professionnels de tous les domaines",
       period: '11/2025 – En cours',
