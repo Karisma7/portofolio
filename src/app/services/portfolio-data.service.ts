@@ -221,12 +221,15 @@ export class PortfolioDataService {
         "Configurer RabbitMQ/Kafka pour la messagerie asynchrone entre les services",
         "Dockeriser l'ensemble des services",
         "Gérer les données avec PostgreSQL et MongoDB en fonction des diffents services" ,
-        "intégrer des systemes de monitoring et de publications gérés par des agents AI pour assurer l'alimentation, la performance et la fiabilité de la plateforme"
+        "Intégrer des systèmes de monitoring et de publications gérés par des agents AI pour assurer l'alimentation, la performance et la fiabilité de la plateforme",
+        "Mettre en place des tests unitaires et d'intégration pour assurer la qualité du code",
+        "Déployer la plateforme sur un serveur cloud et assurer la maintenance continue",
+        "Mettre en place un canal d'intégration continue (CI/CD) pour automatiser les déploiements et les tests via GitLab CI/CD",
       ],
       achievements: [
         "Plateforme en phase de développement actif"
       ],
-      tech: ['Angular','Spring Boot','WebSocket','RabbitMQ','PostgreSQL','MongoDB','Docker, miscroservices','AI agents'],
+      tech: ['Angular','Spring Boot','WebSocket','RabbitMQ','PostgreSQL','MongoDB','Docker', 'GitLab', 'Microservices','AI agents'],
       url: 'https://myspace.revodit.com/'
     },
     {
