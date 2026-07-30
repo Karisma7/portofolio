@@ -16,7 +16,7 @@
   padding: 12px 0; 
   border-bottom: 1px solid rgba(15,23,33,0.04); 
   align-items: flex-start;
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
 }
 
 .projects-card .timeline .job:hover {
@@ -24,7 +24,7 @@
   border-left: 4px solid rgba(25,118,210,0.3);
   padding: 12px 12px 12px 16px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(25,118,210,0.08);
+  box-shadow: 0 4px 0px rgba(25,118,210,0.08);
   cursor: pointer;
 }
 
