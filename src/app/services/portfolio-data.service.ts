@@ -230,7 +230,7 @@ export class PortfolioDataService {
       period: '2026 – En cours',
       summary: "Développement d'une plateforme permettant de mettre en relation des professionnels de santé avec des particuliers pour des consultations et rendez-vous.",
       description: `Conception et développement d'une application web dédiée à la mise en relation entre professionnels de santé (aides soignants, auxiliaires de vie, etc.) et des particuliers.`,
-      details: `L'architecture repose sur des microservices conteneurisés avec Docker, communiquant via RabbitMQ pour la messagerie asynchrone. Supabase est utilisé pour l'authentification, la base de données PostgreSQL et le stockage. Le frontend est développé avec Angular et les API REST/Realtime de Supabase sont consommées pour les fonctionnalités temps réel.`,
+      details: `L'architecture repose sur des microservices conteneurisés avec Docker, communiquant via RabbitMQ pour la messagerie asynchrone. Supabase est utilisé pour l'authentification, la base de données PostgreSQL et le stockage. Le frontend est développé avec Angular.`,
       tasks: [
         "Concevoir l'architecture en microservices et définir les interfaces entre services",
         "Conteneuriser les services avec Docker et Docker Compose",
