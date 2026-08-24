@@ -207,6 +207,43 @@ export class PortfolioDataService {
     //   url: 'https://www.diasporaimmobilierci.com/'
     // },
     {
+      title: "Boutique en ligne de produits alimentaires (épices, condiments, sauces, etc.)",
+      period: '2026 – En cours',
+      summary: "Développement d'une boutique en ligne permettant la vente de produits alimentaires avec gestion des produits, commandes et back-office.",
+      description: `Conception et développement d'une application web e-commerce dédiée à la vente de produits alimentaires. La plateforme offre un catalogue de produits, un panier d'achat, la passation de commandes et un espace d'administration pour gérer les produits et les commandes.`,
+      details: `Le projet repose sur Angular pour le frontend et Firebase comme backend-as-a-service (base de données Firestore, authentification, stockage et hébergement). Il inclut la gestion des utilisateurs, l'affichage du catalogue, la gestion du panier, le suivi des commandes et un tableau de bord administrateur.`,
+      tasks: [
+        "Concevoir la base de données Firestore sur Firebase (produits, commandes, utilisateurs)",
+        "Développer le frontend avec Angular",
+        "Intégrer l'authentification et la gestion des rôles avec Firebase Authentication",
+        "Implémenter le catalogue de produits, le panier et le processus de commande",
+        "Développer le back-office de gestion des produits et des commandes",
+        "Mettre en place le stockage des images et médias sur Firebase Storage",
+        "Consommer les API Firebase (Firestore, Auth, Storage) depuis Angular",
+        "Déployer l'application sur Firebase Hosting et assurer la maintenance continue"
+      ],
+      tech: ['Angular', 'Firebase', 'TypeScript', 'Firestore', 'Firebase Authentication', 'Firebase Storage', 'REST API'],
+      url: ''
+    },
+    {
+      title: "Plateforme de mise en relation entre professionnels de santé et particuliers",
+      period: '2026 – En cours',
+      summary: "Développement d'une plateforme permettant de mettre en relation des professionnels de santé avec des particuliers pour des consultations et rendez-vous.",
+      description: `Conception et développement d'une application web dédiée à la mise en relation entre professionnels de santé (médecins, infirmiers, kinésithérapeutes, etc.) et des particuliers. La plateforme facilite la prise de rendez-vous, les consultations à distance et la gestion des dossiers patients.`,
+      details: `L'architecture repose sur des microservices conteneurisés avec Docker, communiquant via RabbitMQ pour la messagerie asynchrone. Supabase est utilisé pour l'authentification, la base de données PostgreSQL et le stockage. Le frontend est développé avec Angular et les API REST/Realtime de Supabase sont consommées pour les fonctionnalités temps réel.`,
+      tasks: [
+        "Concevoir l'architecture en microservices et définir les interfaces entre services",
+        "Conteneuriser les services avec Docker et Docker Compose",
+        "Mettre en place la messagerie asynchrone entre microservices avec RabbitMQ",
+        "Développer le frontend avec Angular",
+        "Intégrer Supabase Auth pour l'authentification des professionnels et des particuliers",
+        "Concevoir la base de données PostgreSQL sur Supabase (utilisateurs, annonces etc.)",
+        "Déployer et orchestrer les services conteneurisés"
+      ],
+      tech: ['Angular', 'Supabase', 'PostgreSQL', 'Docker', 'RabbitMQ', 'Microservices', 'VPS'],
+      url: ''
+    },
+    {
       title: "Plateforme / réseau social de partage d'experiences et de ressources pour les étudiants et professionnels de tous les domaines",
       period: '11/2025 – En cours',
       summary: "Développement d'une plateforme collaborative permettant le partage de ressources et la communication en temps réel entre utilisateurs.",
@@ -218,7 +255,7 @@ export class PortfolioDataService {
         "Implémenter les services backend  avec Spring Boot",
         "Implémenter les services frontend  avec Angular",
         "Mettre en place la communication en temps réel avec WebSockets",
-        "Configurer RabbitMQ/Kafka pour la messagerie asynchrone entre les services",
+        "Configurer RabbitMQ pour la messagerie asynchrone entre les services",
         "Dockeriser l'ensemble des services",
         "Gérer les données avec PostgreSQL et MongoDB en fonction des diffents services" ,
         "Intégrer des systèmes de monitoring et de publications gérés par des agents AI pour assurer l'alimentation, la performance et la fiabilité de la plateforme",
