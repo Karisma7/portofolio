@@ -222,14 +222,14 @@ export class PortfolioDataService {
         "Consommer les API Firebase (Firestore, Auth, Storage) depuis Angular",
         "Déployer l'application sur Firebase Hosting et assurer la maintenance continue"
       ],
-      tech: ['Angular', 'Firebase', 'TypeScript', 'Firestore', 'Firebase Authentication', 'Firebase Storage', 'REST API'],
+      tech: ['Angular', 'Firebase','Firestore', 'Firebase Authentication', 'Firebase Storage', 'Firebase Hosting'],
       url: ''
     },
     {
       title: "Plateforme de mise en relation entre professionnels de santé et particuliers",
       period: '2026 – En cours',
       summary: "Développement d'une plateforme permettant de mettre en relation des professionnels de santé avec des particuliers pour des consultations et rendez-vous.",
-      description: `Conception et développement d'une application web dédiée à la mise en relation entre professionnels de santé (médecins, infirmiers, kinésithérapeutes, etc.) et des particuliers. La plateforme facilite la prise de rendez-vous, les consultations à distance et la gestion des dossiers patients.`,
+      description: `Conception et développement d'une application web dédiée à la mise en relation entre professionnels de santé (aides soignants, auxiliaires de vie, etc.) et des particuliers.`,
       details: `L'architecture repose sur des microservices conteneurisés avec Docker, communiquant via RabbitMQ pour la messagerie asynchrone. Supabase est utilisé pour l'authentification, la base de données PostgreSQL et le stockage. Le frontend est développé avec Angular et les API REST/Realtime de Supabase sont consommées pour les fonctionnalités temps réel.`,
       tasks: [
         "Concevoir l'architecture en microservices et définir les interfaces entre services",
