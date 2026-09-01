@@ -365,7 +365,7 @@ export class PortfolioDataService {
   ];
 
   languages = [
-    { name: 'Français', level: 'Bilingue / Langue natale' },
+    { name: 'Français'},
     { name: 'Anglais', level: 'Capacité techniques' }
   ];
 
