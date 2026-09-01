@@ -1,8 +1,8 @@
 .skills-card {
   padding: 24px;
   background: var(--card);
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.04);
+  border: 1px solid var(--surface-border-medium);
+  box-shadow: var(--shadow-card);
 }
 
 .skills-card h2 {
@@ -22,10 +22,12 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  border: 1px solid var(--surface-border-medium);
+  padding: 16px;
 }
 
 .skill-section.tech-section {
-  border-right: 1px solid rgba(15, 23, 33, 0.08);
+  border-right: 2px solid var(--surface-border-strong);
   padding-right: 32px;
 }
 
@@ -51,10 +53,9 @@
 }
 
 .section-header .count {
-  background: rgba(25, 118, 210, 0.1);
-  color: #1976d2;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
   padding: 4px 10px;
-  border-radius: 999px;
   font-size: 12px;
   font-weight: 600;
 }
@@ -83,11 +84,11 @@
   margin: 0;
   font-size: 13px;
   font-weight: 700;
-  color: #1565c0;
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 8px 0;
-  border-bottom: 2px solid rgba(25, 118, 210, 0.15);
+  border-bottom: 2px solid rgba(var(--accent-rgb), 0.15);
   padding-bottom: 6px;
 }
 
@@ -95,7 +96,6 @@
   display: inline-flex;
   align-items: center;
   padding: 8px 14px;
-  border-radius: 8px;
   font-size: 13px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -104,16 +104,9 @@
 }
 
 .tech-tag {
-  background: linear-gradient(135deg, rgba(25, 118, 210, 0.08) 0%, rgba(13, 71, 161, 0.04) 100%);
-  color: #1565c0;
-  border: 1px solid rgba(25, 118, 210, 0.2);
-}
-
-.tech-tag:hover {
-  background: linear-gradient(135deg, rgba(25, 118, 210, 0.15) 0%, rgba(13, 71, 161, 0.1) 100%);
-  border-color: rgba(25, 118, 210, 0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.15);
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.08) 0%, rgba(6, 38, 95, 0.04) 100%);
+  color: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.42);
 }
 
 .tag-label {
@@ -135,16 +128,11 @@
   align-items: flex-start;
   gap: 10px;
   padding: 8px 12px;
-  border-radius: 6px;
+  border: 1px solid var(--surface-border-medium);
   transition: all 0.2s ease;
   color: var(--text);
   font-size: 14px;
   line-height: 1.5;
-}
-
-.functional-list li:hover {
-  background: rgba(25, 118, 210, 0.05);
-  padding-left: 16px;
 }
 
 .bullet {
@@ -172,7 +160,7 @@
 
   .skill-section.tech-section {
     border-right: none;
-    border-bottom: 1px solid rgba(15, 23, 33, 0.08);
+    border-bottom: 1px solid var(--surface-border);
     padding-right: 0;
     padding-bottom: 24px;
   }
@@ -211,10 +199,6 @@
   .functional-list li {
     font-size: 13px;
     padding: 6px 8px;
-  }
-
-  .functional-list li:hover {
-    padding-left: 12px;
   }
 
   .skill-section.tech-section {

@@ -4,14 +4,29 @@
 	--card: #ffffff;
 	--muted: #6b7280;
 	--text: #0f1721;
-	--accent: #2563eb; /* bleu sobre */
+	--font-main: Roboto, 'Segoe UI', Arial, sans-serif;
+	--accent: #0b3d91; /* bleu sobre */
+	--accent-rgb: 11,61,145;
+	--accent-dark: #082f6f;
+	--accent-deep: #06265f;
+	--surface-border: rgba(15,23,33,0.08);
+	--surface-border-medium: rgba(15,23,33,0.16);
+	--surface-border-strong: rgba(15,23,33,0.24);
+	--surface-faint: rgba(15,23,33,0.02);
+	--surface-soft: rgba(2,6,23,0.04);
+	--shadow-card: 0 8px 20px rgba(2,6,23,0.04);
+	--shadow-profile: 0 8px 24px rgba(15,23,33,0.06);
+	--shadow-avatar: 0 6px 18px rgba(2,6,23,0.08);
+	--shadow-floating: 0 8px 18px rgba(2,6,23,0.12);
+	--shadow-control: 0 6px 14px rgba(2,6,23,0.18);
+	--shadow-panel: 0 6px 18px var(--glass);
 	--glass: rgba(15,23,33,0.04);
 }
 
 *{box-sizing:border-box}
 html, body, app-root { height: 100%; }
 body{
-	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	font-family: var(--font-main);
 	margin:0; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 	overflow: hidden; /* Empêche le scroll global, seule la colonne centrale sera scrollable */
 }
@@ -21,8 +36,8 @@ header{
 }
 h1{margin:0; font-weight:600}
 .main-full{padding:20px 0}
-.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px var(--glass);}
-.job{background:var(--card);padding:16px;border-radius:10px;margin-bottom:14px;box-shadow:0 4px 12px rgba(12,14,18,0.04)}
+.card{background:var(--card);padding:18px;box-shadow:var(--shadow-panel);}
+.job{background:var(--card);padding:16px;margin-bottom:14px;box-shadow:0 4px 12px rgba(12,14,18,0.04)}
 footer{padding:18px 0;text-align:center;color:var(--muted)}
 
 a{color:var(--accent);text-decoration:none}

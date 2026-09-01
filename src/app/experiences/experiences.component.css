@@ -1,7 +1,6 @@
 .experiences-card { 
   padding: 10px; 
   background: var(--card); 
-  border-radius: 5px; 
 }
 
 .timeline { 
@@ -12,28 +11,26 @@
   display: flex; 
   gap: 18px; 
   padding: 14px 0; 
-  border-bottom: 1px solid rgba(15,23,33,0.04); 
+  border-bottom: 1px solid var(--surface-soft); 
   align-items: flex-start;
   transition: all 0.6s ease;
-  border-radius: 8px;
   padding: 12px 12px;
 }
 
 .timeline .job:hover {
-  background: rgba(25,118,210,0.04);
-  border-left: 4px solid rgba(25,118,210,0.3);
+  background: rgba(var(--accent-rgb),0.04);
+  border-left: 4px solid rgba(var(--accent-rgb),0.3);
   /* padding-left: 16px; */
-  box-shadow: 0 4px 0px rgba(25,118,210,0.08);
+  box-shadow: 0 4px 0px rgba(var(--accent-rgb),0.08);
   cursor: pointer;
 }
 
 .timeline .job.expanded {
   padding: 20px 0;
-  background: rgba(25,118,210,0.02);
-  border-radius: 8px;
+  background: rgba(var(--accent-rgb),0.02);
   /* padding: 16px; */
   margin-bottom: 8px;
-  border-bottom: 2px solid rgba(25,118,210,0.1);
+  border-bottom: 2px solid rgba(var(--accent-rgb),0.1);
 }
 
 .timeline .when { 
@@ -58,7 +55,6 @@
   max-width: 140px;
   height: auto;
   object-fit: contain;
-  border-radius: 6px;
   display: block;
 }
 
@@ -86,7 +82,6 @@
 .timeline .company-head .logo img {
   height: 48px;
   object-fit: contain;
-  border-radius: 6px;
 }
 
 .timeline .what .role { 
@@ -111,19 +106,18 @@
 }
 
 .tech-summary .tag {
-  background: rgba(25,118,210,0.08);
-  color: #1976d2;
+  background: rgba(var(--accent-rgb),0.08);
+  color: var(--accent);
   padding: 4px 8px;
-  border-radius: 6px;
   font-size: 12px;
   font-weight: 500;
-  border: 1px solid rgba(25,118,210,0.2);
+  border: 1px solid rgba(var(--accent-rgb),0.2);
 }
 
 .expand-btn, .collapse-btn {
   background: none;
   border: none;
-  color: #1976d2;
+  color: var(--accent);
   cursor: pointer;
   font-weight: 600;
   padding: 8px 0;
@@ -133,12 +127,11 @@
   gap: 6px;
   font-size: 14px;
   transition: all 0.2s ease;
-  border-radius: 4px;
   padding: 8px 12px;
 }
 
 .expand-btn:hover, .collapse-btn:hover {
-  background: rgba(25,118,210,0.08);
+  background: rgba(var(--accent-rgb),0.08);
   transform: translateX(2px);
 }
 
@@ -154,7 +147,7 @@
 
 .expanded-content {
   animation: slideDown 0.3s ease;
-  border-top: 1px solid rgba(25,118,210,0.2);
+  border-top: 1px solid rgba(var(--accent-rgb),0.2);
   margin-top: 12px;
   padding-top: 12px;
 }
@@ -174,18 +167,17 @@
 
 .context { 
   background: transparent; 
-  border-left: 4px solid rgba(25,118,210,0.3); 
+  border-left: 4px solid rgba(var(--accent-rgb),0.3); 
   padding: 8px 12px; 
   margin: 10px 0;
-  background: rgba(25,118,210,0.04);
-  border-radius: 4px;
+  background: rgba(var(--accent-rgb),0.04);
 }
 
 .context h4 {
   margin: 0 0 6px 0;
   font-size: 14px;
   font-weight: 600;
-  color: #1976d2;
+  color: var(--accent);
 }
 
 .responsibilities {
@@ -196,7 +188,7 @@
   margin: 0 0 8px 0;
   font-size: 14px;
   font-weight: 600;
-  color: #1976d2;
+  color: var(--accent);
 }
 
 .responsibilities ul { 
@@ -218,15 +210,14 @@
   margin: 0 0 10px 0;
   font-size: 14px;
   font-weight: 600;
-  color: #1976d2;
+  color: var(--accent);
 }
 
 .project {
-  background: rgba(15,23,33,0.02);
+  background: var(--surface-faint);
   padding: 10px;
-  border-left: 3px solid rgba(25,118,210,0.3);
+  border-left: 3px solid rgba(var(--accent-rgb),0.3);
   margin-bottom: 10px;
-  border-radius: 4px;
 }
 
 .project h5 {
@@ -250,7 +241,7 @@
   margin: 0 0 8px 0;
   font-size: 14px;
   font-weight: 600;
-  color: #1976d2;
+  color: var(--accent);
 }
 
 .achievements ul {
@@ -274,20 +265,19 @@
 }
 
 .tech .tag {
-  background: rgba(2,6,23,0.04); 
+  background: var(--surface-soft); 
   padding: 6px 10px; 
-  border-radius: 999px; 
   font-size: 12px;
 }
 
 .summary-preview {
   margin-top: 8px;
   padding-top: 8px;
-  border-top: 1px solid rgba(25,118,210,0.1);
+  border-top: 1px solid rgba(var(--accent-rgb),0.1);
 }
 
 .preview-hint {
-  color: #1976d2;
+  color: var(--accent);
   font-size: 13px;
   font-weight: 600;
   display: flex;

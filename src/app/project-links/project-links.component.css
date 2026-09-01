@@ -1,8 +1,7 @@
 .project-links-card {
   padding: 24px;
   background: var(--card);
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.04);
+  box-shadow: var(--shadow-card);
 }
 
 .project-links-card h2 {
@@ -13,10 +12,9 @@
 }
 
 .project-links-card .count {
-  background: rgba(25, 118, 210, 0.1);
-  color: #1976d2;
+  background: rgba(var(--accent-rgb), 0.1);
+  color: var(--accent);
   padding: 4px 10px;
-  border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
   margin-left: 8px;
@@ -39,8 +37,7 @@
   display: flex;
   flex-direction: column;
   padding: 16px;
-  border: 1px solid rgba(15, 23, 33, 0.08);
-  border-radius: 8px;
+  border: 1px solid var(--surface-border);
   background: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   color: inherit;
@@ -49,9 +46,9 @@
 }
 
 .project-link:hover {
-  background: rgba(25, 118, 210, 0.04);
-  border-color: rgba(25, 118, 210, 0.3);
-  box-shadow: 0 8px 16px rgba(25, 118, 210, 0.12);
+  background: rgba(var(--accent-rgb), 0.04);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  box-shadow: 0 8px 16px rgba(var(--accent-rgb), 0.12);
   transform: translateY(-2px);
 }
 
@@ -78,7 +75,7 @@
 
 .external-icon {
   flex-shrink: 0;
-  color: #1976d2;
+  color: var(--accent);
   font-weight: bold;
   font-size: 16px;
   transition: transform 0.3s ease;
@@ -91,7 +88,7 @@
 .project-link .company {
   margin: 0;
   font-size: 12px;
-  color: #1976d2;
+  color: var(--accent);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;

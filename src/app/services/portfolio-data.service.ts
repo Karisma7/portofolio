@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class PortfolioDataService {
-  name = 'ASSIGA ATEBA Basile';
+  name = 'ASSIGA ATEBA BASILE';
 
   about = `Passionné par l’informatique, j’ai acquis au fil de mes expériences d’excellentes compétences en infrastructure IT ainsi qu’en développement. Rigoureux, réactif et doté d’une excellente capacité d’adaptation, je suis prêt à relever de nouveaux défis au sein d’une organisation collaborative et stimulante, où je pourrais mettre à profit mes compétences. Participer à des projets innovants, qu’il s’agisse de la mise en place, de l’optimisation ou de la maintenance d’architectures informatiques ou applicatives, représente pour moi une réelle source de motivation et un moteur dans mon évolution professionnelle.`;
 
@@ -365,7 +365,7 @@ export class PortfolioDataService {
   ];
 
   languages = [
-    { name: 'Français'},
+    { name: 'Français', level: ''},
     { name: 'Anglais', level: 'Capacité techniques' }
   ];
 
