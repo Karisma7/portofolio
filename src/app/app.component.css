@@ -73,7 +73,7 @@ footer{padding:18px 0;text-align:center;color:#666}
   body{overflow:auto} /* allow page scroll on small screens */
   .center-col{height:auto;overflow-y:auto;max-height:calc(100vh - 80px);padding:0;padding-bottom:80px;margin-right:0}
   
-  /* Hamburger menu visible en mobile */
+  /* Hamburger menu visible en mobile. */
   .hamburger-menu{display:flex}
   .header-profile{display:block}
 
