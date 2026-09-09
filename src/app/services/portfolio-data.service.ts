@@ -204,7 +204,7 @@ export class PortfolioDataService {
     //     "Interface ergonomique favorisant la mise en relation"
     //   ],
     //   tech: ['Webflow','Memberstack'],
-    //   url: 'https://www.diasporaimmobilierci.com/'
+    //   url: 'https://www.diasporaimmobilierci.com/'.
     // },
     {
       title: "Boutique en ligne de produits alimentaires",
