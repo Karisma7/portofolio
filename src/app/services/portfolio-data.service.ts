@@ -207,7 +207,7 @@ export class PortfolioDataService {
     //   url: 'https://www.diasporaimmobilierci.com/'
     // },
     {
-      title: "Boutique en ligne de produits alimentaires (épices, condiments, sauces, etc.)",
+      title: "Boutique en ligne de produits alimentaires",
       period: '2026 – En cours',
       summary: "Développement d'une boutique en ligne permettant la vente de produits alimentaires avec gestion des produits, commandes et back-office.",
       description: `Conception et développement d'une application web e-commerce dédiée à la vente de produits alimentaires. La plateforme offre un catalogue de produits, un panier d'achat, la passation de commandes et un espace d'administration pour gérer les produits et les commandes.`,
@@ -229,18 +229,18 @@ export class PortfolioDataService {
       title: "Plateforme de mise en relation entre professionnels de santé et particuliers",
       period: '2026 – En cours',
       summary: "Développement d'une plateforme permettant de mettre en relation des professionnels de santé avec des particuliers pour des consultations et rendez-vous.",
-      description: `Conception et développement d'une application web dédiée à la mise en relation entre professionnels de santé (aides soignants, auxiliaires de vie, etc.) et des particuliers.`,
-      details: `L'architecture repose sur des microservices conteneurisés avec Docker, communiquant via RabbitMQ pour la messagerie asynchrone. Supabase est utilisé pour l'authentification, la base de données PostgreSQL et le stockage. Le frontend est développé avec Angular.`,
+      description: `Conception et développement d'une application web dédiée à la mise en relation entre professionnels de santé (aides-soignants, auxiliaires de vie, etc.) et des particuliers.`,
+      details: `L'architecture repose sur un monolithe modulaire, permettant de structurer l'application en différents modules fonctionnels tout en conservant une application unique. Supabase est utilisé pour l'authentification, la base de données PostgreSQL et le stockage. Le frontend est développé avec Angular.`,
       tasks: [
-        "Concevoir l'architecture en microservices et définir les interfaces entre services",
-        "Conteneuriser les services avec Docker et Docker Compose",
-        "Mettre en place la messagerie asynchrone entre microservices avec RabbitMQ",
+        "Concevoir l'architecture monolithique modulaire et définir les différents modules fonctionnels",
         "Développer le frontend avec Angular",
         "Intégrer Supabase Auth pour l'authentification des professionnels et des particuliers",
-        "Concevoir la base de données PostgreSQL sur Supabase (utilisateurs, annonces etc.)",
-        "Déployer et orchestrer les services conteneurisés"
+        "Concevoir la base de données PostgreSQL sur Supabase (utilisateurs, annonces, etc.)",
+        "Développer les fonctionnalités de mise en relation et de gestion des rendez-vous",
+        "Structurer et maintenir les différents modules de l'application",
+        "Déployer et maintenir l'application (Cloud RUN, Vercel)"
       ],
-      tech: ['Angular', 'Supabase', 'PostgreSQL', 'Docker', 'RabbitMQ', 'Microservices', 'VPS'],
+      tech: ['Angular', 'Supabase', 'Monolithe modulaire', 'GCP'],
       url: 'https://myspace-sante.revodit.com/'
     },
     {
@@ -248,7 +248,7 @@ export class PortfolioDataService {
       period: '11/2025 – En cours',
       summary: "Développement d'une plateforme collaborative permettant le partage de ressources et la communication en temps réel entre utilisateurs.",
       description: `Plateforme web moderne dédiée à la collaboration et au partage de ressources / actualités. Elle offre des fonctionnalités de communication en temps réel et de partage de fichiers.`,
-      details: `Le projet intègre une architecture microservices robuste avec communication asynchrone via RabbitMQ /(Kafka), des bases de données PostgreSQL pour les données relationnelles et MongoDB pour les données semi-structurées, des websockets pour une communication en temps réel.`,
+      details: `Le projet intègre une architecture microservices robuste avec communication asynchrone via RabbitMQ des bases de données PostgreSQL pour les données relationnelles et MongoDB pour les données semi-structurées, des websockets pour une communication en temps réel.`,
       tasks: [
         "Concevoir l'architecture microservices et les patterns de communication asynchrone",
         "Développer le frontend avec Angular pour une UX fluide",
